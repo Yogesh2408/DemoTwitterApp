@@ -1,6 +1,5 @@
 <resources>
-    <string name="app_name">TwitterDemoApp</string>
-
+    <string name="app_name">DemoTwitterApp</string>
     <string name="title_follow">Follow</string>
     <string name="title_following">Following</string>
     <string name="title_followers">Followers</string>

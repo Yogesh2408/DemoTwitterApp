@@ -1,23 +1,23 @@
-package com.yogesh.twitterdemo.ui
+package com.yogesh.twitterdemo.UI
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
-import androidx.appcompat.app.AppCompatActivity
 import android.widget.Toast
-import com.yogesh.twitterdemo.ProfilePresenter
-import com.yogesh.twitterdemo.ui.fragments.LoaderFragment
-import com.yogesh.twitterdemo.ui.fragments.TweetsListFragment
-import com.yogesh.twitterdemo.ui.profile.ProfileContract
-import com.yogesh.vnicius.twitterclone.R
+import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
+import com.yogesh.twitterdemo.extras.ProfileContract
+import com.yogesh.twitterdemo.extras.ProfilePresenter
+import com.yogesh.twitterdemo.R
 import twitter4j.Status
 import java.io.Serializable
 
 /**
  * Profile Activity View
  */
-class ProfileActivity : AppCompatActivity(), ProfileContract.View {
+class ProfileActivity : AppCompatActivity(),
+    ProfileContract.View {
 
-    private val presenter: ProfileContract.Presenter = ProfilePresenter(this)
+    private val presenter: ProfileContract.Presenter =
+        ProfilePresenter(this)
     private var currentUserID: Long = -1
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -33,7 +33,8 @@ class ProfileActivity : AppCompatActivity(), ProfileContract.View {
     }
 
     override fun showTweets(tweets: MutableList<Status>) {
-        val fragment = TweetsListFragment.newInstance()
+        val fragment =
+            TweetsListFragment.newInstance()
         val args = Bundle()
 
         // pass the list of tweets to the Tweets List Fragment by argument
@@ -54,7 +55,10 @@ class ProfileActivity : AppCompatActivity(), ProfileContract.View {
 
     override fun finish() {
         super.finish()
-        overridePendingTransition(R.anim.anim_fade_in, R.anim.anim_slide_out_right)
+        overridePendingTransition(
+            R.anim.anim_fade_in,
+            R.anim.anim_slide_out_right
+        )
     }
 
     private fun changeFragment(fragment: Fragment) {

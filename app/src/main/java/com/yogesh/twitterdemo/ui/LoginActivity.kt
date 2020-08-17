@@ -1,4 +1,4 @@
-package com.yogesh.twitterdemo.ui
+package com.yogesh.twitterdemo.UI
 
 import android.annotation.SuppressLint
 import android.annotation.TargetApi
@@ -8,15 +8,15 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
 import android.util.Log
 import android.view.View
 import android.webkit.WebResourceRequest
 import android.webkit.WebView
 import android.webkit.WebViewClient
-import com.yogesh.twitterdemo.ui.ProfileActivity.Companion.USER_ID
-import com.yogesh.vnicius.twitterclone.R
-import com.yogesh.vnicius.twitterclone.utils.Utils
+import androidx.appcompat.app.AppCompatActivity
+import com.yogesh.twitterdemo.R
+import com.yogesh.twitterdemo.UI.ProfileActivity.Companion.USER_ID
+import com.yogesh.twitterdemo.extras.Utils
 import kotlinx.coroutines.*
 import twitter4j.Twitter
 import twitter4j.TwitterFactory
@@ -187,7 +187,7 @@ class LoginActivity : AppCompatActivity() {
     }
 
 
-    suspend fun isLoggedIn(): Boolean {
+    private suspend fun isLoggedIn(): Boolean {
 
         val builder = ConfigurationBuilder()
         builder.setOAuthConsumerKey(Utils.TWITTER_CONSUMER_KEY)
@@ -197,11 +197,11 @@ class LoginActivity : AppCompatActivity() {
         val config = builder.build()
         val factory = TwitterFactory(config)
         val twitter = factory.instance
-        try {
+        return try {
             withContext(Dispatchers.IO) { twitter.verifyCredentials() }
-            return true
+            true
         } catch (e: Exception) {
-            return false
+            false
         }
     }
 
