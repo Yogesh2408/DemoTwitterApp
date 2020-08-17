@@ -1,0 +1,32 @@
+<resources>
+    <dimen name="app_bar_height">150dp</dimen>
+
+    <!-- region Button Heights -->
+    <dimen name="button_height">30dp</dimen>
+    <!--  endregion  -->
+
+    <!-- region Icon sizes -->
+    <dimen name="icon_bigger">80dp</dimen>
+    <dimen name="icon_normal">24dp</dimen>
+    <!--  endregion  -->
+
+    <!-- region Font sizes -->
+    <dimen name="font_large">24sp</dimen>
+    <dimen name="font_normal">18sp</dimen>
+    <dimen name="font_small">14sp</dimen>
+    <!--  endregion  -->
+
+    <!-- region Spacings -->
+    <dimen name="spacing_large">32dp</dimen>
+    <dimen name="spacing_normal">16dp</dimen>
+    <dimen name="spacing_small">8dp</dimen>
+    <dimen name="spacing_tiny">4dp</dimen>
+    <dimen name="spacing_tinier">2dp</dimen>
+    <dimen name="spacing_unit">1dp</dimen>
+    <!--  endregion  -->
+
+    <!-- region Avatar Image Sizes -->
+    <dimen name="avatar_large">100dp</dimen>
+    <dimen name="avatar_normal">50dp</dimen>
+    <!--  endregion  -->
+</resources>

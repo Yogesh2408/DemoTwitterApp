@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- region Basic Colors -->
+    <color name="black">#14171A</color>
+    <color name="gray_dark">#657786</color>
+    <color name="gray_extra_light">#E1E8ED</color>
+    <color name="white">#fff</color>
+    <color name="red">#ff0000</color>
+    <color name="green">#17bf63</color>
+    <color name="blue">#1DA1F2</color>
+    <color name="blue_dark">#141d26</color>
+    <!--  endregion  -->
+
+    <!-- region Specific colors  -->
+    <color name="color_primary">@color/blue</color>
+    <color name="color_primary_dark">@color/blue_dark</color>
+    <color name="color_accent">@color/blue</color>
+    <!--  endregion  -->
+</resources>

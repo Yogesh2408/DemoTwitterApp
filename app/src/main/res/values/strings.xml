@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">TwitterDemoApp</string>
+
+    <string name="title_follow">Follow</string>
+    <string name="title_following">Following</string>
+    <string name="title_followers">Followers</string>
+    <string name="title_tweets">Tweets</string>
+    <string name="title_activity_profile">ProfileActivity</string>
+    <string name="label_btn_try_again">Try again</string>
+    <string name="error_message_connection">Connection error</string>
+    <string name="description_user_header">User header</string>
+    <string name="description_more_options_btn">More options button</string>
+    <string name="description_comment_ic">Comment icon</string>
+    <string name="description_retweet_ic">Retweet icon</string>
+    <string name="description_favourite_ic">Favourite icon</string>
+    <string name="description_share_ic">Share icon</string>
+
+</resources>
